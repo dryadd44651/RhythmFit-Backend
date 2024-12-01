@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-$572+p!h==)af)4hc67mh32ci#wv!s^#9y!o6lt1%sh0w4*f!_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://rhythmfit-frontend-ed72d71bd3df.herokuapp.com', 'localhost', "127.0.0.1"]
+ALLOWED_HOSTS = ['hythmfit-backend-1b9beaadeae1.herokuapp.com',' https://rhythmfit-frontend-ed72d71bd3df.herokuapp.com', 'localhost', "127.0.0.1"]
 
 
 # Application definition
@@ -136,8 +136,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost",
-    "http://127.0.0.1",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
     "https://rhythmfit-frontend-ed72d71bd3df.herokuapp.com",
 ]
 
