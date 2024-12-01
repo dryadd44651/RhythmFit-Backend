@@ -137,7 +137,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://rhythmfit-frontend-ed72d71bd3df.herokuapp.com/",
+    "https://rhythmfit-frontend-ed72d71bd3df.herokuapp.com",
 ]
 
 CORS_ALLOW_METHODS = [
