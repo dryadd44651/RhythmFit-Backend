@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserSerializer, RegisterSerializer, ExerciseSerializer, WorkoutSerializer
 from .models import Exercise, Workout
+from django.contrib.auth.models import User
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()

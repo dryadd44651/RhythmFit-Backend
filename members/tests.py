@@ -102,6 +102,7 @@ class WorkoutTests(APITestCase):
         """
         url = reverse('workout-list')
         data = {
+            "user": self.user.id,
             "currentCycle": "medium",
             "trainedGroups": ["Legs", "Back"],
         }
@@ -125,7 +126,9 @@ class WorkoutTests(APITestCase):
         """
         workout = Workout.objects.create(user=self.user, currentCycle="light", trainedGroups=[])
         url = reverse('workout-detail', args=[workout.id])
+        print("put workouts",url)
         data = {
+            "user": self.user.id,
             "currentCycle": "medium",
             "trainedGroups": ["Arms"]
         }
