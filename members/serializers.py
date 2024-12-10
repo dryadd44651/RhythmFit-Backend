@@ -27,9 +27,14 @@ class ExerciseSerializer(serializers.ModelSerializer):
         model = Exercise
         fields = ['id', 'name', 'max1RM', 'group']
 
+
 class WorkoutSerializer(serializers.ModelSerializer):
-    exercises = ExerciseSerializer(many=True, read_only=True)
-    
     class Meta:
         model = Workout
-        fields = ['user', 'currentCycle', 'trainedGroups', 'exercises']
+        fields = ['id', 'currentCycle', 'trainedGroups', 'user']
+        read_only_fields = ['user']
+
+    def get_fields(self):
+        fields = super().get_fields()
+        print(fields)  # Debugging: Print all fields
+        return fields
