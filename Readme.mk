@@ -3,6 +3,8 @@ pip install -r requirements.txt
 
 #Using venv (no need to setup lib)
 source myenv/bin/activate
+#Using venv in windows
+./wenv/Scripts/activate
 
 #Leave venv
 deactivate
