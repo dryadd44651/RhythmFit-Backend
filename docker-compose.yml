@@ -3,6 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
+    image: rhythmfit-backend-web  # Explicit image name
     ports:
       - "8000:8000"
     volumes:
