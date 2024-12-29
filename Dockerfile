@@ -16,5 +16,9 @@ COPY . .
 # Expose application port
 EXPOSE 8000
 
+# Run tests and keep logs if tests fail
+RUN mkdir -p logs
+RUN python manage.py test > logs/test.log || (cat logs/test.log && exit 1)
+
 # Start Django development server
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

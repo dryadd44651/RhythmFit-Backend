@@ -110,6 +110,13 @@ Using Docker Compose:
 docker-compose up
 ```
 
+### 3. Update the Application
+Down, rebuild, and up 
+```bash
+docker-compose down
+docker-compose up --build -d
+```
+
 ---
 
 ## **Suggestions for Improvement**
